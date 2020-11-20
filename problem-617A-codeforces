@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int steps=0;
+cin >> steps;
+cout<< endl;
+if (steps<5)
+
+    cout<<1<<endl;
+else
+   {
+    if (steps%5==0)
+        cout<<steps/5<<endl;
+    else if (steps%5!=0&&steps>5)
+        cout<<(steps/5)+1<<endl; /* hna olt +1 l2n l elephant bym4y
+    1:5 movies fe l mara fa 3omr ma reminder l steps hykon akbar mn 5 */
+    }
+	return 0;
+}
+
