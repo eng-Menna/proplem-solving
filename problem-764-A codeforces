@@ -4,7 +4,8 @@ int main()
 {ios_base::sync_with_stdio(false);
     int n,m,z,counter=0;
     cin>>n>>m>>z;
-    for (int i=n ;i<=z;i+=n)/*3mlt l increment kda 34an he said n increases n , 2n w hakza*/
+    for (int i=n ;i<=z;i+=n)/*i++ --> n+1 ,n+2 ....
+                              i+=n --> i=i+n --> 2n,3n.... w hwa 3ayz de fe l problem*/
         {for(int  j=m;j<=z;j+=m)
         {if(i==j)
           counter++;}}
