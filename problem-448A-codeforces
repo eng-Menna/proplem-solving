@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int a1,a2,a3,b1,b2,b3,n,s,k;
+    cin>>a1>>a2>>a3;
+    cin>>b1>>b2>>b3;
+    cin >> n;
+    k=(a1+a2+a3);
+    s=(b1+b2+b3);
+   k = ceil( (double) k /5);
+   s = ceil((double) s/10);
+   if ((s+k)<=n)
+    cout<<"YES";
+   else
+    cout<<"NO";
+        return 0;
+
+}
+
