@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+#define endl'\n';
+using namespace std;
+
+int main(){
+cin.tie(0);
+cin.sync_with_stdio(0);
+#ifndef ONLINE_JUDGE
+freopen("IN.txt","r",stdin);
+#endif // ONLINE_JUDGE
+int numProb,n5,n2,n3,wanted=0;
+cin>>numProb;
+cout<<endl;
+while(numProb--)
+{
+    cin>>n5>>n2>>n3;
+    if((n5+n2+n3)>=2)
+        wanted++;
+}
+cout<<wanted<<endl;
+}
+
+
