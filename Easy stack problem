@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#define Est ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main()
+{ Est
+
+int T,u,m;
+cin>>T;
+stack<int> v;
+    for (int i = 0; i <T ; ++i) {
+        cin>>u;
+        if(u==1)
+        {
+            cin>>m;
+            v.push(m);
+        }
+        if (u==2)
+        {
+            if (!v.empty())
+            v.pop();
+        }
+        if (u==3)
+        {
+            if (v.empty())
+                cout<<"Empty!"<<'\n';
+            else
+                cout<<v.top()<<'\n';
+        }
+    }
+}
