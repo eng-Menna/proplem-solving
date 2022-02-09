@@ -1,0 +1,26 @@
+
+#include <bits/stdc++.h>
+#define Est ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main()
+{ Est
+
+    int n,dim ; cin>>n>>dim; deque<int> dq;
+    int arr[n];
+
+    for (int i = 0; i < n ; i++) {
+        cin>>arr[i];
+        dq.push_back(arr[i]);
+    }
+
+    for (int i = 0; i < dim; i++) {
+        dq.push_back(dq.front());
+        dq.pop_front();
+    }
+
+    while(!dq.empty()){
+        cout<<dq.front()<<" ";
+        dq.pop_front();
+    }
+
+}
