@@ -1,0 +1,53 @@
+#include <bits/stdc++.h>
+#define IO ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main() {
+    IO
+    int n; cin>>n;
+    while (n!=0){
+    	vector<int> car,result; stack<int>stk;
+        int target=1;
+    for (int i = 0; i < n ; ++i) {
+        int data;
+        cin>>data;
+        car.push_back(data);
+    }
+
+    for (int i = 0; i <n ; ++i) {
+        if(car[i]==target){
+            result.push_back(target);
+            target++;
+            continue;
+        }
+
+        else if(!stk.empty()&&stk.top()==target) {
+            result.push_back(target);
+            stk.pop();
+            target++;
+            i--;
+        }
+
+        else
+            stk.push(car[i]);
+    }
+    while(!stk.empty()) {
+        result.push_back(stk.top());
+        stk.pop();
+    }
+     bool ok = true;
+        for (int i = 0; i <n-1 ; i++) {
+            if(result[i] > result[i+1]){
+                ok= false;
+                break;
+            }
+        }
+
+        if (ok){
+            cout<<"yes"<<"\n";}
+        else{
+            cout<<"no"<<"\n";}
+
+        cin>>n;
+       
+}}
+
