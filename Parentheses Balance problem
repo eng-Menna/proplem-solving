@@ -1,0 +1,44 @@
+
+#include <bits/stdc++.h>
+#define IOS ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main()
+{ IOS
+int n; cin>>n;
+    cin.ignore();
+    while(n!=0){
+            string sto;  stack<char>stk; bool ok=0;
+            getline(cin,sto);
+            if(sto.length()&1)
+            {
+                cout<<"No\n";
+                n--;
+                continue;
+            }
+            else{
+            for (char & i : sto) {
+                if (i == '(' || i == '[')
+                    stk.push(i);
+                else
+                {
+                    if(stk.empty())
+
+                        ok=1;
+
+                    else{
+                    if((stk.top()=='('&&i!=')')||(stk.top()=='['&&i!=']'))
+                        ok=1;
+                    else
+                        stk.pop();}
+
+                }
+
+            }}
+            if(ok||!stk.empty())
+                cout<<"No\n";
+            else
+                cout<<"Yes\n";
+        n--;
+    }
+    }
+
