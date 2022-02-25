@@ -1,0 +1,82 @@
+#include <bits/stdc++.h>
+#define IOS ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main() {
+    IOS
+    int n;
+    cin >> n;
+    deque<int> dq;
+    int RReverse = 0;
+    while (n--) {
+        string k;
+        cin >> k;
+        if (k == "front") {
+            if (!(RReverse & 1))//even reverses
+            {
+                if (!dq.empty()) {
+                    int front;
+                    front = dq.front();
+                    cout << front << '\n';
+                    dq.pop_front();
+                } else
+                    cout << "No job for Ada?\n";
+            } else {
+                if (!dq.empty()) {
+                    int back;
+                    back = dq.back();
+                    cout << back << '\n';
+                    dq.pop_back();
+                } else
+                    cout << "No job for Ada?\n";
+
+            }
+        } else if (k == "back") {
+            if (!(RReverse & 1)) {
+                if (!dq.empty()) {
+                    int back;
+                    back = dq.back();
+                    cout << back << '\n';
+                    dq.pop_back();
+                } else
+                    cout << "No job for Ada?\n";
+            } else {
+                if (!dq.empty()) {
+                    int front;
+                    front = dq.front();
+                    cout << front << '\n';
+                    dq.pop_front();
+                } else
+                    cout << "No job for Ada?\n";
+            }
+        } else if (k == "toFront") {
+            if (!(RReverse & 1)){
+            int ko;
+            cin >> ko;
+            dq.push_front(ko);}
+            else
+            {
+                int kp;
+                cin >> kp;
+                dq.push_back(kp);
+            }
+        }
+
+        else if (k == "reverse")
+            RReverse++;
+        else//k=="push_back"
+        {
+            if (!(RReverse & 1)){
+            int kp;
+            cin >> kp;
+            dq.push_back(kp);}
+            else
+            {
+                int ko;
+                cin >> ko;
+                dq.push_front(ko);
+            }
+        }
+    }
+}
+
+
