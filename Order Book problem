@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+#define IOS ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+int32_t main()
+{ IOS
+
+    map<int,int ,greater<>>map1;map<int,int>sell;
+    int numOfOrders = 0,bookDepth=0;
+    cin>>numOfOrders>>bookDepth;
+    for (int i = 0; i <numOfOrders ; ++i) {
+        char BorS ;int p,v;
+        cin>>BorS>>p>>v;
+        if (BorS=='B')
+        {
+                map1[p]+=v;
+        }
+        else
+        {
+                sell[p]+=v;
+        }
+
+
+    }
+    int i=0; vector<pair<int,int>>v;
+    for (auto it =sell.begin();(it!=sell.end()&&i<bookDepth);i++,it++) {
+            v.emplace_back(*it);
+    }
+  
+    sort(v.rbegin(),v.rend());
+    for (auto k :v) {
+        cout<<'S'<<" "<<k.first<<" "<<k.second<<'\n';
+
+    }
+    int s=0;
+    for (auto it =map1.begin();(it!=map1.end()&&s<bookDepth);s++,it++) {
+        cout<<'B'<<" "<<it->first<<" "<<it->second<<'\n';
+    }}
+
+
+
+
+
