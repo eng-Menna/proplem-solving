@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+#define IOS ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+using namespace std;
+
+int32_t main() {
+    IOS
+    int cont=0;
+string st,target="hello"; cin>>st;
+vector<char>word;
+    for(auto i:st)
+        word.push_back(i);
+
+    for (char i : word) {
+        if(i==target[cont])
+            cont++;
+    }
+    if (cont==5)
+        cout<<"YES\n";
+    else
+        cout<<"NO\n";
+
+}
+
+
