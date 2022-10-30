@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define IOS ios_base::sync_with_stdio(false),cin.tie(0),cout.tie(0);
+//#define loopUP(i, s, e, inc) for(int i = (s); i < (e); i+=inc
+typedef long long ll; const ll Lo = 0x3f3f3f3f3f3f3f3f, N = 1e7 + 9, M = 1e5 + 9;
+#define el '\n' ;
+//vector<int> num ;
+//num=vector<int>();
+int main() {
+    IOS
+int n; cin>>n; map<string,int>mp;
+
+    while (n--)
+    {
+        string sg;
+        cin>>sg;
+        mp[sg]+=1;
+        if (mp[sg]==1)
+        {cout<<"OK"<<el;}
+        else
+        { cout<< sg<<mp[sg]-1<<el;}
+    }
+}
+
+
